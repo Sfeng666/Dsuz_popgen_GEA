@@ -1,0 +1,37 @@
+# submit a job node for running BayeScEnv
+
+### this is a single job that stages large data
+# Files for the below lines MUST all be somewhere within /home/username,
+# and not within /staging/username
+
+initialdir = $(outdir_home)
+executable = $(dir_scripts)/run_bayescenv_chtc.sh
+arguments = "$(chr) $(env_var) $(num) $(in_snp) $(in_env) $(pr_pref)"
+log = $(job).log
+output = $(job).out
+error = $(job).err
+when_to_transfer_output = ON_EXIT_OR_EVICT
+
+## Do NOT list the large data files here
+transfer_input_files = $(software_pack), $(in_snp), $(in_env)
+should_transfer_files = YES
+
+# IMPORTANT! Require execute servers that can access /staging
+# Requirements = (Target.HasCHTCStaging == true)
+
+# add this flag for jobs expected to run for longer than 72 hours
+# do not use the +LongJob flag unnecessarily or without consulting the Research Computing Facilitators. 
+# When this flag is applied in other cases, it can make a job take longer to start 
++LongJob = $(longjob)
+
+# Make sure to still include lines like "request_memory", "request_disk", "request_cpus", etc. 
++WantFlocking = false
++WantGlideIn = false
+request_cpus = $(request_cpus)
+request_memory = $(request_memory)
+request_disk = $(request_disk)
+
+# periodic_release = (JobStatus == 5) && (NumJobStarts < 5) && (HoldReasonCode == 21)
+# request_memory = ifthenelse(MemoryUsage > RequestMemory, MAX({$(request_memory),MemoryUsage * 4/3}), $(request_memory))
+# request_disk = ifthenelse(DiskUsage > RequestDisk, MAX({$(request_disk),DiskUsage * 4/3}), $(request_disk))
+queue

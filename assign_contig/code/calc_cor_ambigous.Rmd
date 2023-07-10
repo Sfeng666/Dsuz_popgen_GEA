@@ -1,0 +1,193 @@
+---
+title: "contig_assignment_by_correlation"
+author: "Siyuan Feng"
+date: "2/10/2021"
+output: 
+  pdf_document:
+    fig_width: 8
+    fig_height: 6
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load the dataset
+```{r}
+setwd("/Users/siyuansmac/bioinfo/temp")
+df <- read.delim(file="mean_depth_format.txt", header=T, sep="\t", row.names = 1)
+df
+```
+# 1. Decide which correlation method to use
+```{r}
+# test normality of A and X individually
+A <- as.numeric(df['auto-contigs',-1])
+X <- as.numeric(df['X-contigs', -1])
+
+# contig <- cor.test(A, as.numeric(df['NC_050699.1', -1]), method = 'spearman')
+# x <- cor.test(A, X, method = 'spearman')
+# contig
+# x
+
+hist(A, main = 'Distribution of Auto-linked sites mean coverage among samples', 
+     xlab = 'mean depth', breaks = 60)
+hist(X, main = 'Distribution of X-linked sites mean coverage  among samples', 
+     xlab = 'mean depth', breaks = 60)
+```
+
+The Pearson correlation coefficient assumes bivariate normality, which require both variables are each normally distributed. As shown in the histograms, either the distribution of either Auto-linked or X-linked mean coverage among samples is normal, which will serve as one of the two variables in our correlation analysis. Thus, we should use the non-parametric Spearman's rank correlation. (it's also possible to transform the data to normality, but I didn't give it a try for simplicity.)
+
+# 2. calculate the correlation between each contig (placed/unplaced) and Auto/X-linked mean depth
+```{r warning=TRUE}
+# calculate correlations (setting an 'ambiguous' category when both correlations are non-significant)
+Corres <- apply(df, 1, function(row){
+    A <- as.numeric(df['auto-contigs',-1])
+    X <- as.numeric(df['X-contigs', -1])
+    contig <- as.numeric(row[-1])
+
+    corre_A <- cor.test(A, contig, method = "spearman", exact = F) # compute p-values using asymptotic t approximation given ties in the datdset
+    corre_X <- cor.test(X, contig, method = "spearman", exact = F)
+    
+    # corre_A <- cor.test(A, contig, method = "spearman")
+    # corre_X <- cor.test(X, contig, method = "spearman")
+    
+    if (corre_A$estimate > corre_X$estimate & (corre_A$p.value < 0.05 | corre_X$p.value < 0.05)){
+        assigned <- 'auto-linked'
+    }else if (corre_A$estimate < corre_X$estimate & (corre_A$p.value < 0.05 | corre_X$p.value < 0.05)){
+        assigned <- 'X-linked'
+    }else {assigned <- 'ambiguous'}
+    # return(c(assigned,0))
+    return(c(corre_A$estimate, corre_A$p.value, corre_X$estimate, corre_X$p.value, assigned))
+})
+
+# calculate correlations (without the 'ambiguous' category)
+Corres.AorX <- apply(df, 1, function(row){
+    A <- as.numeric(df['auto-contigs',-1])
+    X <- as.numeric(df['X-contigs', -1])
+    contig <- as.numeric(row[-1])
+
+    corre_A <- cor.test(A, contig, method = "spearman", exact = F) # compute p-values using asymptotic t approximation given ties in the datdset
+    corre_X <- cor.test(X, contig, method = "spearman", exact = F)
+    
+    # corre_A <- cor.test(A, contig, method = "spearman")
+    # corre_X <- cor.test(X, contig, method = "spearman")
+    
+    if (corre_A$estimate > corre_X$estimate ){
+        assigned <- 'auto-linked'
+    }else if (corre_A$estimate < corre_X$estimate ){
+        assigned <- 'X-linked'
+    }else {assigned <- 'equal'}
+    # return(c(assigned,0))
+    return(c(corre_A$estimate, corre_A$p.value, corre_X$estimate, corre_X$p.value, assigned))
+})
+
+# look at the change in proportions of categories
+catgr <- data.frame(with_ambiguous=c(dim(Corres[,-1:-2][,Corres[5, -1:-2] == "auto-linked"])[2],
+dim(Corres[,-1:-2][,Corres[5, -1:-2] == "X-linked"])[2],
+dim(Corres[,-1:-2][,Corres[5, -1:-2] == "ambiguous"])[2]), 
+without_ambiguous=c(dim(Corres.AorX[,-1:-2][,Corres.AorX[5, -1:-2] == "auto-linked"])[2],
+dim(Corres.AorX[,-1:-2][,Corres.AorX[5, -1:-2] == "X-linked"])[2],
+dim(Corres.AorX[,-1:-2][,Corres.AorX[5, -1:-2] == "ambiguous"])[2]))
+row.names(catgr) <- c("auto-linked", "X-linked", "ambiguous")
+catgr
+
+inter.auto <- length(intersect(colnames(Corres[,-1:-2][,Corres[5, -1:-2] == "auto-linked"]),
+colnames(Corres.AorX[,-1:-2][,Corres.AorX[5, -1:-2] == "auto-linked"])))
+inter.X <- length(intersect(colnames(Corres[,-1:-2][,Corres[5, -1:-2] == "X-linked"]),
+colnames(Corres.AorX[,-1:-2][,Corres.AorX[5, -1:-2] == "X-linked"])))
+inter.auto
+inter.X
+```
+
+# 3. validate the accurary of assignment by known mappable contigs
+```{r}
+# generate a table of contig mapping and contig assignment by correlation
+df_assn <- data.frame(cbind(mapping = df[-1:-2, "Assigned.Molecule"], cor_assign = Corres[5, -1:-2]))
+df_assn <- df_assn[order(row.names(df_assn)),]
+df_assn
+
+# calculate the overlap ratio of assignment by correlation with assignment by direct mapping
+cat('Overlap ratio of assignment by correlation with assignment by direct mapping: ',
+    dim(df_assn[df_assn$mapping != 'na' &
+    ((df_assn$mapping == "X" & df_assn$cor_assign == "X-linked") | 
+       (df_assn$mapping != "X" & df_assn$cor_assign == "auto-linked")),])[1]/
+      dim(df_assn[df_assn$mapping != 'na',])[1])
+```
+
+# 4. compare the results of our assignment to results from the suzukii genome paper from Kapun
+```{r}
+# generate a table of contig mapping, contig assignment by correlation and contig assignment by Kapun
+df_kapun <- read.delim(file="assignment_Kappun_refseq.txt", header=F, sep="\t", 
+                       col.names = c('contig', 'chr'))
+df_assn <- merge(df_assn, df_kapun, by.x = 0, by.y = 1)
+names(df_assn)[c(1, 4)] <- c("contig", "kapun_assign")
+
+# output the table for downstream calculation of maximum coverage
+write.table(df_assn, file="assignment_cor_amb.txt", sep="\t", row.names = F, quote = F)
+
+# calculate the overlap ratio of assignment by correlation with assignment by Kapun
+cat('Overlap ratio of assignment by correlation with assignment by direct mapping: ',
+    dim(df_assn[is.na(df_assn$kapun_assign) == FALSE & df_assn$mapping == 'na' &
+    ((df_assn$kapun_assign == "X" & df_assn$cor_assign == "X-linked") | 
+       (df_assn$kapun_assign == "A" & df_assn$cor_assign == "auto-linked")),])[1]/
+      dim(df_assn[is.na(df_assn$kapun_assign) == FALSE & df_assn$mapping == 'na',])[1])
+
+# print contigs with un-overlapped assignment
+df_assn[is.na(df_assn$kapun_assign) == FALSE & df_assn$mapping == 'na' &
+    !((df_assn$kapun_assign == "X" & df_assn$cor_assign == "X-linked") | 
+        (df_assn$kapun_assign == "A" & df_assn$cor_assign == "auto-linked")),]
+```
+
+# 5. plot the distribution of depth among samples and contigs
+```{r message=FALSE, warning=FALSE}
+library(ggplot2)
+
+# def a function to plot the distribution of depth among samples and contigs
+plot_lines <- function(percent, direction, legend_pos, title){
+  # generate the table for plotting
+  if (direction == "above"){
+    df_extract <- df[rowMeans(df[,-1] >= quantile(as.vector(as.matrix(df[,-1])), percent)) != 0,]
+  }else if (direction == "below"){
+    df_extract <- df[rowMeans(df[,-1] >= quantile(as.vector(as.matrix(df[,-1])), percent)) == 0,]}
+  rownames_plot <- rownames(df_extract)[rownames(df_extract) !=
+  "auto-contigs" & rownames(df_extract) != "X-contigs"]
+  df_plot <- data.frame(contig = rep(rownames_plot, each = length(colnames(df_extract)[-1])), 
+  sample = factor(colnames(df_extract)[-1]), depth = 
+    as.vector(as.matrix(t(df_extract[rownames_plot, -1]))))
+  
+  # plot line charts
+  ggplot(df_plot, aes(x = sample, y = depth, colour = contig, group = contig)) + geom_line() + geom_point() +
+  labs(x = "Sample", y = "Depth of coverage", title = title) +
+  theme(panel.grid =element_blank(), panel.background = element_blank(), panel.border = element_blank()) +
+  theme(axis.line = element_line(colour = "black")) +
+  theme(legend.position=legend_pos) + 
+  theme(axis.text = element_text(colour = "black", size = 5, angle = 45, hjust = 1)) +
+  theme(axis.ticks = element_line(colour = "black"))
+}
+
+# plot distributions for all contigs
+plot_lines(0, "above", "none", "Distributions of coverage (all contigs)")
+
+# plot distributions for contigs with the maximum depth lower than 99.79% 
+plot_lines(0.9979, "below", "none", "Distributions of coverage (outliers removed)")
+
+# plot distributions for contigs with the maximum depth no lower than 99.79% 
+plot_lines(0.9979, "above", "right", "Distributions of coverage (outliers)")
+
+# print assignments for outlier contigs
+df_assn[df_assn$contig == "NW_023497096.1"|df_assn$contig =="NW_023497167.1"|
+          df_assn$contig =="NW_023497290.1",]
+
+Corres[1:5, c("NW_023497096.1", "NW_023497167.1", "NW_023497290.1")]
+
+Corres[1:5, c("NW_023496975.1", "NW_023496985.1", "NW_023497035.1", "NW_023497156.1", "NW_023497192.1")]
+
+# Plot A:  X-axis is mean autosomal depth, Y-axis is this contig’s depth, one point for each population.
+
+# Plot B:  Same but for X mean depth
+
+# 2 predictor/independent/X variables:  Autosomal means and X means
+# 1 response/dependent/Y variable:  This contig’s depths
+```
+We've got three contigs as outliers with aberrantly high overall depth of coverage, of which two have especially high coverage. All three contigs were assigned to autosomes by our correlation method, and are short (20000 ~ 40000 bp).

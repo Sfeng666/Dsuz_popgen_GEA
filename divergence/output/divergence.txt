@@ -1,0 +1,2 @@
+non-synonymous	2-fold_synonymous	3-fold_synonymous	4-fold_synonymous	3'UTR	5'UTR	RNA-coding_regions	intron	intergenic
+0.030928	0.138504	0.171969	0.194242	0.090634	0.105963	0.107202	0.137397	0.126376

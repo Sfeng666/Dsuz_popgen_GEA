@@ -1,0 +1,202 @@
+---
+title: "Extract environmental variables"
+author: "Siyuan Feng"
+date: "12/6/2021"
+output: 
+  html_document:
+    fig_width: 15
+    fig_height: 15
+---
+
+## 0. setup paths and functions
+```{r setup, include=T}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+knitr::opts_knit$set(echo = F,
+                      highlight = T,
+                      tidy = T)
+
+library(raster)
+library(rgdal)
+library(corrplot)
+library(dplyr)
+library(R.utils)
+library(sp)
+
+## paths
+knitr::opts_knit$set(root.dir = '/Users/siyuansmac/bioinfo/project/suzukii_WGS/EAA')
+path_data <- 'data/env_data'
+
+## functions
+### download and process monthly environmental variable into annual variable
+annual.env.pop <- function(url){
+  dir.zip <- paste(path_data, basename(url), sep = '/')
+  dir.unzip <- gsub(sprintf("[.]%s$", 'zip'), "", dir.zip, ignore.case = TRUE)
+  download.file(url, dir.zip, method = 'curl')
+  unzip(dir.zip, exdir = dir.unzip)
+  tifDat <- list.files(dir.unzip, "tif$")
+  mt.mon <- matrix(, nrow = dim(geod)[1], ncol = 0)
+  for (tif in tifDat){
+    dt.mon <- raster::stack(paste(dir.unzip, tif, sep = '/'))
+    pop.mon <-  raster::extract(dt.mon, geod[,c('Longitude','Latitude')])
+    mt.mon <- cbind(mt.mon, pop.mon)
+  }
+  vc.annual <- apply(mt.mon, 1, mean)
+  return(vc.annual)
+}
+
+### compute the p-value of correlations
+### To compute the matrix of p-value, a custom R function is used :
+### mat : is a matrix of data
+### ... : further arguments to pass to the native R cor.test function
+cor.mtest <- function(mat, ...) {
+  mat <- as.matrix(mat)
+  n <- ncol(mat)
+  p.mat<- matrix(NA, n, n)
+  diag(p.mat) <- 0
+  for (i in 1:(n - 1)) {
+    for (j in (i + 1):n) {
+      tmp <- cor.test(mat[, i], mat[, j], ...)
+      p.mat[i, j] <- p.mat[j, i] <- tmp$p.value
+    }
+  }
+  colnames(p.mat) <- rownames(p.mat) <- colnames(mat)
+  p.mat
+}
+
+```
+
+## 1. extract environmental data for sampled locations
+### 1.1. read tab-delimited file of geographic coordinates (longtitude & latitude)
+```{r}
+geod <- read.table(paste(path_data, "sample_coord_UTM.txt", sep = '/'), header=T)
+```
+
+### 1.2. fetch global environmental data & extract environmental variables from wordclim
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+### Bioclimatic variables (temperature + precipitation)
+# setwd('/Users/siyuansmac/bioinfo/project/suzukii_WGS/EAA')
+clim.dt <- raster::getData('worldclim', var='bio', res=5, path = path_data)
+clim.pop <- raster::extract(clim.dt, geod[,c('Longitude','Latitude')])
+clim.pop <- rename_(as.data.frame(clim.pop), 
+                     'Annual_Mean_Temperature'=1,
+                     'Mean_Diurnal_Range'=2,
+                     'Isothermality'=3,
+                     'Temperature_Seasonality'=4,
+                     'Max_Temperature_of_Warmest_Month'=5,
+                     'Min_Temperature_of_Coldest_Month'=6,
+                     'Temperature_Annual_Range'=7,
+                     'Mean_Temperature_of_Wettest_Quarter'=8,
+                     'Mean_Temperature_of_Driest_Quarter'=9,
+                     'Mean_Temperature_of_Warmest_Quarter'=10,
+                     'Mean_Temperature_of_Coldest_Quarter'=11,
+                     'Annual_Precipitation'=12,
+                     'Precipitation_of_Wettest_Month'=13,
+                     'Precipitation_of_Driest_Month'=14,
+                     'Precipitation_Seasonality'=15,
+                     'Precipitation_of_Wettest_Quarter'=16,
+                     'Precipitation_of_Driest_Quarter'=17,
+                     'Precipitation_of_Warmest_Quarter'=18,
+                     'Precipitation_of_Coldest_Quarter'=19)
+### altitude 
+alt.dt <- raster::getData('worldclim', var = 'alt', res = 5, path = path_data)
+alt.pop <- raster::extract(alt.dt, geod[,c('Longitude','Latitude')])
+alt.pop <- data.frame('Altitude'=alt.pop)
+
+### annual mean wind speed (m s-1)
+url = "https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_5m_wind.zip"
+wind.pop <- data.frame('Annual_Mean_Wind_Speed'=annual.env.pop(url), check.names = F)
+
+### annual mean solar radiation (kJ m-2 day-1)
+url = "https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_5m_srad.zip"
+srad.pop <- data.frame('Annual_Mean_Solar_Radiation'=annual.env.pop(url), check.names = F)
+
+### annual mean water vapor pressure (kPa)
+url = "https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_5m_vapr.zip"
+vapr.pop <- data.frame('Annual_Mean_Water_Vapor_Pressure'=annual.env.pop(url), check.names = F)
+```
+
+### 1.3. fetch & extract global land cover variables from ESRI
+```{r}
+path.esri <- paste(path_data, '/', 'ESRI_2020_land_cover/', sep = '')
+suf.esri <- '_20200101-20210101.tif'
+land.pop <- data.frame('Ratio_Crop_to_Forest'=c(),
+                       'Ratio_Built_to_Vegetation'=c(), 
+                       check.names = F)
+
+for (i in row.names(geod)){
+  utm <- geod[i,]$UTM
+  land.dt <- raster::raster(paste(path.esri, utm, suf.esri, sep = ''))
+  
+  ### project sample coordinate
+  points.crs <- SpatialPoints(geod[i, c('Longitude','Latitude')], 
+                              proj4string=CRS("+proj=longlat +datum=WGS84"))
+  
+  ### reproject sample coordinate to the coordinate reference system (CRS) of target raster object
+  points.reproj <- sp::spTransform(points.crs, CRSobj = crs(land.dt))
+  
+  ### extract cells within a given range
+  land.range <- raster::extract(land.dt, points.reproj, buffer=2/pi*5000*sqrt(2), small=TRUE)[[1]]
+  
+  ### calculate land use composition - crop/forest & built/(crop + forest)
+  crop <- length(land.range[land.range == 5])
+  tree <- length(land.range[land.range == 2])
+  built <- length(land.range[land.range == 7])
+  crop.vs.forest <- crop/tree
+  built.vs.veg <- built/(crop + tree)
+  crop.vs.forest[!is.finite(crop.vs.forest)] <- 0 # set to 0 if denominator is 0
+  built.vs.veg[!is.finite(built.vs.veg)] <- 0
+  
+  ### add the composition to the sample dataframe
+  land.pop <- rbind(land.pop, data.frame('Ratio_Crop_to_Forest'=crop.vs.forest,
+                                'Ratio_Built_to_Vegetation'=built.vs.veg, 
+                                check.names = F))
+
+  }
+```
+
+## 2. Prepare env data for BayeScEnv
+### 2.1. combine variables into a full data set
+```{r}
+env.pop <- cbind(geod, clim.pop, wind.pop, srad.pop,vapr.pop, alt.pop, land.pop)
+env.pop
+write.table(env.pop, file = paste(path_data, '/', 'sample_coord_UTM_variables.txt', sep = ''), 
+            row.names = F, quote = F)
+```
+
+### 2.2 trasfer environmental data of interest into BayeScEnv input format
+```{r}
+env.var.select <- c('Ratio_Crop_to_Forest', 'Ratio_Built_to_Vegetation', 
+                    'Altitude', 'Annual_Mean_Wind_Speed', 
+                    'Mean_Temperature_of_Warmest_Quarter', 
+                    'Mean_Temperature_of_Coldest_Quarter', 
+                    'Mean_Diurnal_Range',
+                    'Annual_Precipitation',
+                    'Precipitation_Seasonality')
+for (env.var in env.var.select){
+write.table(t(abs(env.pop[,env.var] - mean(env.pop[,env.var]))/sd(env.pop[,env.var])), 
+    file = paste(path_data, '/', 'input_BayeScEnv/', 
+    paste(unlist(strsplit(env.var, split = ' ')), collapse = '_'), '.txt', sep = ''), 
+    row.names = F, col.names = F, quote = F, sep = '\t')
+}
+```
+
+## 3 check data distribution of each environmental variable
+## 3.1 check coffefficient of variation among variables (suspecting a relationship of CV to number of outliers detected by GEA )
+```{r}
+df.cv <- data.frame()
+env.var.select <- c('Ratio_Crop_to_Forest', 'Ratio_Built_to_Vegetation', 
+                    'Altitude', 'Annual_Mean_Wind_Speed', 
+                    'Mean_Temperature_of_Warmest_Quarter', 
+                    'Mean_Temperature_of_Coldest_Quarter', 
+                    'Mean_Diurnal_Range',
+                    'Annual_Precipitation',
+                    'Precipitation_Seasonality')
+df.cv<- data.frame(cv=sapply(env.var.select, function(env_var){return(sd(env.pop[,env_var])/mean(env.pop[,env_var]))}))
+write.table(df.cv, file = paste(path_data, '/', 'env_var_CV.txt', sep = ''), sep = '\t', 
+            row.names = T, col.names = F, quote = F)
+```
+

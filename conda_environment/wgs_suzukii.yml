@@ -1,0 +1,17 @@
+name: wgs_suzukii
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+  - r
+dependencies:
+  - treemix
+  - r-sp
+  - r-data.table
+  - r-readr
+  - r-scatterplot3d
+  - r-robust
+  - r-r.utils
+  - r-ggplot2
+  - bedtools
+prefix: /home/siyuan/biosoft/miniconda3/envs/wgs_suzukii

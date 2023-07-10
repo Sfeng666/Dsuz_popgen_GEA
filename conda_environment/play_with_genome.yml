@@ -1,0 +1,10 @@
+name: /opt/miniconda3/envs/play_with_genome
+channels:
+  - conda-forge
+  - defaults
+  - bioconda
+  - r
+dependencies:
+  - bedtools
+  - parallel
+prefix: /opt/miniconda3/envs/play_with_genome

@@ -1,0 +1,279 @@
+GO:0004820	m	glycine-tRNA ligase activity	2	3	0.00029000000000000656	ProRS-m,GlyRS
+GO:0006426	b	glycyl-tRNA aminoacylation	2	3	0.00029000000000000656	ProRS-m,GlyRS
+GO:1990504	b	dense core granule exocytosis	2	2	0.0004100000000000056	unc-13,Cadps
+GO:0071819	c	DUBm complex	2	6	0.0013300000000000325	not,e(y)2b
+GO:0051647	b	nucleus localization	7	46	0.0013499999999999788	Bsg,koi,klar,msn,nudE,jar,asp
+GO:0015232	m	heme transporter activity	2	2	0.0015300000000000177	CG1358,Hmt-1
+GO:0015886	b	heme transport	2	2	0.0015300000000000177	CG1358,Hmt-1
+GO:0007465	b	R7 cell fate commitment	7	66	0.001889999999999962	mts,aop,phyl,cdi,klg,pnt,pros
+GO:0030953	b	astral microtubule organization	2	4	0.0023500000000000053	spd-2,asp
+GO:0045466	b	R7 cell differentiation	12	66	0.0024399999999999986	mts,salm,CadN2,aop,phyl,Dl,cdi,klg,ss,pnt,pros
+GO:0016360	b	sensory organ precursor cell fate determination	6	28	0.002510000000000012	numb,uif,phyl,fz,nuf,Cul5
+GO:0060582	b	cell fate determination involved in pattern specification	6	22	0.002510000000000012	numb,uif,phyl,fz,nuf,Cul5
+GO:0008021	c	synaptic vesicle	8	97	0.0026700000000000374	unc-13,Cadps,Gdi,VGlut,jeb,Syx7,Sytbeta,Rab40
+GO:0140535	c	intracellular protein-containing complex	24	535	0.002759999999999997	mts,Sbat,alc,Prosalpha4T2,Pka-R2,CG33144,phyl,Psc,muskelin,CG11396,not,Not10,SNF4Agamma,Kdm2,CG5003,ss,Cul5,Elp1,e(y)2b,TfIIFalpha,CG2104,Fer2LCH,moon
+GO:1901678	b	iron coordination entity transport	2	3	0.0033400000000000873	CG1358,Hmt-1
+GO:1902850	b	microtubule cytoskeleton organization involved in mitosis	8	89	0.0034499999999999774	dgt5,nudE,wake,jar,asp,cv-c,Orc2,CG2104
+GO:0000340	m	RNA 7-methylguanosine cap binding	3	23	0.003519999999999975	eIF4G1,eIF4E4,CG2091
+GO:0035249	b	synaptic transmission, glutamatergic	4	28	0.0036100000000000823	unc-13,Cadps,VGlut,CG32447
+GO:0012505	c	endomembrane system	53	1242	0.004400000000000005	unc-13,Cadps,bru1,Gdi,uif,CG9171,pigeon,IA-2,Duox,Snx1,VGlut,Slh,tkv,mol,Pgant9,Sema2a,ReepA,CG8841,jeb,koi,Pgant3,klar,cmpy,CG4074,CG11396,siz,Syx7,sfl,app,Sytbeta,fz,nuf,nudE,Vps36,CG32485,CG32199,GlcAT-P,Plod,Pdi,Trpml,EMC10,Dl,alpha-Man-IIa,lqfR,CG7218,CG31145,CG5342,e(y)2b,plx,PH4alphaEFB,Fer2LCH,Cad99C,CG3823,Rab40
+GO:0007051	b	spindle organization	9	135	0.0044800000000000334	mts,dgt5,nudE,spd-2,jar,asp,cv-c,Orc2,CG2104
+GO:0007052	b	mitotic spindle organization	6	81	0.004699999999999994	dgt5,nudE,asp,cv-c,Orc2,CG2104
+GO:0000339	m	RNA cap binding	3	15	0.004959999999999967	eIF4G1,eIF4E4,CG2091
+GO:0030904	c	retromer complex	2	10	0.004959999999999967	Snx1,CG4074
+GO:0009649	b	entrainment of circadian clock	5	26	0.004989999999999984	Ir25a,tim,hid,timeout,Pdf
+GO:0008062	b	eclosion rhythm	3	20	0.005160000000000033	tim,Pdf,disco
+GO:0008135	m	translation factor activity, nucleic acid binding	6	73	0.005459999999999982	eIF4G1,Dgp-1,eIF3c,eIF4E4,eIF5B,eIF4H2
+GO:0005723	c	alpha-heterochromatin	1	1	0.0055199999999998245	Orc2
+GO:0003743	m	translation initiation factor activity	5	110	0.005849999999999918	eIF4G1,eIF3c,eIF4E4,eIF5B,eIF4H2
+GO:0007010	b	cytoskeleton organization	41	660	0.006029999999999966	mts,Bsg,bru1,spir,CG32982,sick,CG10839,chinmo,Btk29A,d,osp,brp,Pkn,dgt5,klar,Spn,siz,jv,fz,nuf,nudE,dar1,spd-2,kug,sti,Dl,cdi,gukh,wake,jar,tau,betaTub97EF,asp,cv-c,HEATR2,stg,Jupiter,Orc2,CG2104,asl,stai
+GO:0018107	b	peptidyl-threonine phosphorylation	4	19	0.006299999999999796	Dyrk3,Dyrk2,Hipk,sti
+GO:0032266	m	phosphatidylinositol-3-phosphate binding	3	17	0.006569999999999952	Atg18b,Snx1,Vps36
+GO:0018210	b	peptidyl-threonine modification	4	20	0.006590000000000029	Dyrk3,Dyrk2,Hipk,sti
+GO:0051298	b	centrosome duplication	5	42	0.006849999999999973	mts,nudE,asp,stg,asl
+GO:0007219	b	Notch signaling pathway	9	171	0.0071599999999998375	kuz,numb,uif,Nak,phyl,Hipk,msn,Dl,E(spl)m4-BFM
+GO:0051301	b	cell division	19	282	0.007759999999999995	mts,spir,numb,Nak,chinmo,tkv,Pkn,fz,nuf,sti,Dl,wake,jar,asp,cv-c,pros,msi,asl,tll
+GO:0000226	b	microtubule cytoskeleton organization	21	382	0.007779999999999679	mts,spir,CG10839,dgt5,klar,nudE,dar1,spd-2,wake,jar,tau,betaTub97EF,asp,cv-c,HEATR2,stg,Jupiter,Orc2,CG2104,asl,stai
+GO:0045746	b	negative regulation of Notch signaling pathway	5	103	0.00783000000000001	numb,uif,phyl,msn,E(spl)m4-BFM,E(spl)m4-BFM
+GO:0098831	c	presynaptic active zone cytoplasmic component	3	9	0.00828999999999976	unc-13,Bsg,brp
+GO:0006404	b	RNA import into nucleus	1	1	0.008419999999999888	Snup
+GO:0061015	b	snRNA import into nucleus	1	1	0.008419999999999888	Snup
+GO:0098793	c	presynapse	15	173	0.008609999999999894	unc-13,Cadps,Bsg,Gdi,VGlut,tkv,brp,Cbp53E,ReepA,Magi,jeb,Syx7,Sytbeta,gukh,Rab40
+GO:0008052	b	sensory organ boundary specification	6	27	0.008659999999999812	numb,uif,phyl,fz,nuf,Cul5
+GO:0016578	b	histone deubiquitination	2	13	0.008669999999999746	not,e(y)2b
+GO:0099503	c	secretory vesicle	10	99	0.008719999999999669	unc-13,Cadps,Gdi,IA-2,VGlut,jeb,cmpy,Syx7,Sytbeta,Rab40
+GO:0004674	m	protein serine/threonine kinase activity	17	407	0.00909999999999995	Dyrk3,CG7236,Nak,Dyrk2,CG9962,tkv,Pkg21D,Pkn,Pka-R2,Hipk,msn,nmo,sty,sti,cdi,SNF4Agamma,CG31145
+GO:0046530	b	photoreceptor cell differentiation	25	228	0.009329999999999708	mts,Bsg,bun,salm,CadN2,aop,tkv,stan,phyl,jeb,klar,msn,fz,sty,Dl,cdi,hth,klg,tau,ss,pnt,pros,msi,sdk
+GO:0031369	m	translation initiation factor binding	3	29	0.009369999999999823	eIF4G1,eIF3c,eIF4E4
+GO:0051293	b	establishment of spindle localization	6	35	0.009369999999999823	spir,nudE,wake,jar,asp,cv-c
+GO:0051653	b	spindle localization	6	35	0.009369999999999823	spir,nudE,wake,jar,asp,cv-c
+GO:0008593	b	regulation of Notch signaling pathway	7	74	0.009659999999999672	numb,uif,Nak,phyl,Hipk,msn,E(spl)m4-BFM
+GO:0070382	c	exocytic vesicle	8	81	0.01006999999999962	unc-13,Cadps,Gdi,VGlut,jeb,Syx7,Sytbeta,Rab40
+GO:0050767	b	regulation of neurogenesis	16	140	0.010989999999999622	mts,bun,numb,CadN,aop,Sema2a,stan,fz,nudE,dar1,Dl,pnt,pros,Antp,E(spl)m5-HLH,Myc
+GO:0007295	b	growth of a germarium-derived egg chamber	3	11	0.011029999999999833	kug,Plod,Cul5
+GO:0045665	b	negative regulation of neuron differentiation	4	12	0.011029999999999833	aop,sty,cdi,sdk
+GO:0046533	b	negative regulation of photoreceptor cell differentiation	4	13	0.011029999999999833	aop,sty,cdi,sdk
+GO:1904778	b	positive regulation of protein localization to cell cortex	1	1	0.011039999999999536	Lnk
+GO:0017075	m	syntaxin-1 binding	1	2	0.011689999999999753	unc-13
+GO:0019992	m	diacylglycerol binding	1	1	0.011689999999999753	unc-13
+GO:0061789	b	dense core granule priming	1	1	0.011689999999999753	unc-13
+GO:0099011	b	neuronal dense core vesicle exocytosis	1	1	0.011689999999999753	unc-13
+GO:0099069	b	synaptic vesicle tethering involved in synaptic vesicle exocytosis	1	1	0.011689999999999753	unc-13
+GO:0099525	b	presynaptic dense core vesicle exocytosis	1	1	0.011689999999999753	unc-13
+GO:0031588	c	AMP-activated protein kinase complex	2	4	0.011729999999999895	alc,SNF4Agamma
+GO:0031410	c	cytoplasmic vesicle	27	457	0.011829999999999776	unc-13,Cadps,spir,Gdi,uif,IA-2,Snx1,VGlut,Slh,tkv,jeb,cmpy,CG4074,Syx7,Sytbeta,fz,nuf,Vps36,CG32485,Trpml,Dl,lqfR,jar,Cad99C,spri,CG3823,Rab40
+GO:0097708	c	intracellular vesicle	27	453	0.011829999999999776	unc-13,Cadps,spir,Gdi,uif,IA-2,Snx1,VGlut,Slh,tkv,jeb,cmpy,CG4074,Syx7,Sytbeta,fz,nuf,Vps36,CG32485,Trpml,Dl,lqfR,jar,Cad99C,spri,CG3823,Rab40
+GO:0001751	b	compound eye photoreceptor cell differentiation	22	201	0.01197999999999955	mts,bun,salm,CadN2,aop,tkv,stan,phyl,jeb,klar,fz,sty,Dl,cdi,hth,klg,tau,ss,pnt,pros,msi
+GO:0000274	c	mitochondrial proton-transporting ATP synthase, stator stalk	2	8	0.012039999999999502	knon,ATPsynD
+GO:0045265	c	proton-transporting ATP synthase, stator stalk	2	5	0.012039999999999502	knon,ATPsynD
+GO:0051960	b	regulation of nervous system development	22	222	0.012039999999999502	mts,bun,numb,CadN,aop,tkv,mid,Sema2a,stan,Spn,fz,nudE,nmo,dar1,Trpml,Dl,pnt,pros,Antp,E(spl)m5-HLH,plum,Myc
+GO:0099738	c	cell cortex region	10	74	0.012039999999999502	unc-13,Bsg,Traf4,brp,Pkn,Spn,app,nuf,Dl,pros
+GO:0007267	b	cell-cell signaling	40	541	0.01208999999999941	unc-13,Cadps,mts,nAChRalpha6,Gdi,drl,Dyrk2,CG9962,Snx1,aop,VGlut,tkv,brp,Cbp53E,phyl,jeb,Galphaq,Hipk,Shab,FMRFaR,cmpy,Syx7,sfl,Sytbeta,fz,nmo,DopEcR,Trpml,CG32447,Dl,lqfR,cpo,cv-c,Nlg1,Nlg3,5-HT7,tll,CDase,TkR99D,dnc,CG9650
+GO:0015439	m	ABC-type heme transporter activity	1	1	0.012939999999999856	Hmt-1
+GO:0035351	b	heme transmembrane transport	1	1	0.012939999999999856	Hmt-1
+GO:0090079	m	translation regulator activity, nucleic acid binding	7	92	0.013109999999999398	eIF4G1,Dgp-1,eIF3c,eIF4E4,eIF5B,msi,eIF4H2
+GO:0040001	b	establishment of mitotic spindle localization	5	30	0.013159999999999308	nudE,wake,jar,asp,cv-c
+GO:0055057	b	neuroblast division	6	45	0.01368999999999991	mts,numb,wake,jar,pros,tll
+GO:0035154	b	terminal cell fate specification, open tracheal system	3	8	0.01385999999999942	salm,aop,pnt
+GO:0051030	b	snRNA transport	1	2	0.013869999999999355	Snup
+GO:0048518	b	positive regulation of biological process	97	1839	0.014679999999999856	Cadps,mts,bun,bru1,spir,kuz,CG44085,numb,pigeon,drl,Nak,ham,CG10348,CG10462,odd,sob,Dyrk2,chinmo,Traf4,CG9962,Snx1,her,aop,VGlut,tkv,H15,mid,tim,Pkn,Cbp53E,Sema2a,retn,Mef2,wde,CG33144,stan,phyl,Oaz,jeb,rgr,muskelin,Hipk,msn,Tet,Shab,CG2113,FMRFaR,cmpy,siz,Syx7,vvl,Trl,fz,nudE,dar1,mas,DopEcR,sphinx2,PGRP-SD,mbf1,kug,not,hid,CG7368,hzg,Trpml,TfAP-2,bnl,Dl,SNF4Agamma,hth,wake,jar,CG7218,Ubx,cv-c,Pli,CG4374,pnt,stg,CG11873,CG14710,Jupiter,pros,CG9925,e(y)2b,Alh,Antp,TfIIFalpha,CG2091,tll,TkR99D,Cad99C,Lnk,dysf,Pdf,spri,Myc,CG3198,disco,CG7691
+GO:0120035	b	regulation of plasma membrane bounded cell projection organization	15	147	0.014939999999999383	ham,CadN,Sema2a,stan,vvl,fz,nudE,dar1,mas,kug,CG7218,ss,cv-c,pros,Cad99C
+GO:1904776	b	regulation of protein localization to cell cortex	1	2	0.015289999999999805	Lnk
+GO:0001709	b	cell fate determination	16	134	0.015439999999999784	kuz,numb,uif,Traf4,aop,mid,phyl,fz,nuf,nudE,Dl,jar,Ubx,Cul5,pros,msi
+GO:0005856	c	cytoskeleton	30	536	0.015659999999999123	Dyrk3,mts,Bsg,ssp3,Dyrk2,d,CG10874,osp,brp,ReepA,dgt5,CG43340,klar,Oseg2,Spn,CG2113,jv,nuf,nudE,spd-2,sti,gukh,wake,jar,tau,CG7218,betaTub97EF,asp,Jupiter,asl
+GO:0016706	m	oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, 2-oxoglutarate as one donor, and incorporation of one atom each of oxygen into both donors	5	49	0.01588999999999921	Tet,CG32199,Plod,Kdm2,PH4alphaEFB
+GO:0031344	b	regulation of cell projection organization	15	151	0.01590999999999976	ham,CadN,Sema2a,stan,vvl,fz,nudE,dar1,mas,kug,CG7218,ss,cv-c,pros,Cad99C
+GO:0034755	b	iron ion transmembrane transport	2	8	0.016199999999999524	Hmt-1,Fer2LCH
+GO:0043530	m	adenosine 5'-monophosphoramidase activity	1	3	0.016529999999999493	HINT1
+GO:0002251	b	organ or tissue specific immune response	3	12	0.016729999999999343	Duox,Galphaq,Cad99C
+GO:0002385	b	mucosal immune response	3	15	0.016729999999999343	Duox,Galphaq,Cad99C
+GO:0032027	m	myosin light chain binding	2	11	0.016739999999999068	jar,asp
+GO:0009383	m	rRNA (cytosine-C5-)-methyltransferase activity	1	1	0.01679999999999982	CG8545
+GO:0016434	m	rRNA (cytosine) methyltransferase activity	1	2	0.01679999999999982	CG8545
+GO:0080025	m	phosphatidylinositol-3,5-bisphosphate binding	2	6	0.01694999999999947	Atg18b,Trpml
+GO:0045596	b	negative regulation of cell differentiation	13	97	0.017049999999999475	mts,bun,salm,numb,CadN,aop,Sema2a,sty,Dl,cdi,pnt,pros,sdk
+GO:0005938	c	cell cortex	17	214	0.017229999999999485	unc-13,Bsg,spir,numb,Traf4,brp,Pkn,Spn,msn,app,nuf,sti,Dl,jar,cv-c,pros,Lnk,spri
+GO:0001752	b	compound eye photoreceptor fate commitment	11	78	0.01724999999999934	mts,aop,tkv,phyl,fz,cdi,hth,klg,pnt,pros,msi
+GO:0042706	b	eye photoreceptor cell fate commitment	11	78	0.01724999999999934	mts,aop,tkv,phyl,fz,cdi,hth,klg,pnt,pros,msi
+GO:0006826	b	iron ion transport	3	18	0.01730999999999969	CG1358,Hmt-1,Fer2LCH
+GO:0030307	b	positive regulation of cell growth	6	64	0.017369999999999643	bun,stan,fz,dar1,Lnk,Myc
+GO:0051179	b	localization	118	2669	0.01790999999999927	unc-13,Cadps,Bsg,bun,ab,spir,Eato,CG9254,kuz,Fkbp59,nAChRalpha6,numb,Gdi,uif,CG43321,Atg18b,Nak,tweek,CG9270,Ca-alpha1D,RFeSP,chinmo,MFS3,IA-2,Traf4,Ir25a,CG9962,Snx1,Trpgamma,CG5888,Btk29A,aop,VGlut,Slh,tkv,nompC,tim,DCTN5-p25,mol,Nnf1b,brp,wun2,Pkn,Sema2a,knon,CG8389,Eglp2,Mef2,stan,ktub,CG34396,CG8841,jeb,koi,Pgant3,CG1358,CG1139,klar,Oseg2,msn,Snup,Shab,cmpy,CG4074,CG11396,Syx7,ple,GluRIA,sfl,Best2,app,Sytbeta,fz,nuf,ND-24L,nudE,Vps36,CG32485,ZnT63C,CG43206,kug,caps,CG11262,not,Oatp74D,CG32079,CG43693,Trpml,bnl,Dl,ATPsynD,gukh,CG7720,SNF4Agamma,hth,lqfR,wake,CG4704,Hmt-1,jar,CG7218,asp,cv-c,HEATR2,pnt,CG31262,pros,Dic2,Nlg1,Nlg3,e(y)2b,plx,asl,tll,CDase,Fer2LCH,Cad99C,Lnk,dysf,spri,CG3690,CG3823,CG9650,Ca-alpha1T,Rab40,stai
+GO:0030133	c	transport vesicle	8	104	0.018119999999999612	unc-13,Cadps,Gdi,VGlut,jeb,Syx7,Sytbeta,Rab40
+GO:0001754	b	eye photoreceptor cell differentiation	22	205	0.018239999999999066	mts,bun,salm,CadN2,aop,tkv,stan,phyl,jeb,klar,fz,sty,Dl,cdi,hth,klg,tau,ss,pnt,pros,msi
+GO:1901409	b	positive regulation of phosphorylation of RNA polymerase II C-terminal domain	1	1	0.01889999999999896	Trl
+GO:0005737	c	cytoplasm	146	5336	0.018979999999999185	eIF4G1,unc-13,Dyrk3,Cadps,mts,Bsg,bun,SC35,bru1,spir,Fkbp59,numb,Gdi,Cyp4d21,RapGAP1,uif,CG43321,CG11050,Atg18b,CG12511,CG7236,CG9171,CG31913,pigeon,Nak,CG10839,Dyrk2,RFeSP,MFS3,IA-2,Traf4,CG9962,HINT1,betaggt-II,Sbat,Snx1,Btk29A,aop,VGlut,Slh,tkv,tim,mol,Pkg21D,brp,Pkn,alc,Pgant9,Cbp53E,CG9010,Sema2a,knon,eIF3c,Prosalpha4T2,ReepA,Pka-R2,CG33144,Magi,ktub,CG8841,phyl,exp,jeb,koi,Pgant3,CG43340,muskelin,Hipk,klar,Oseg2,Spn,msn,ProRS-m,Snup,CG2113,CG4858,cmpy,CG4074,CG11396,siz,Syx7,ple,eIF4E4,sfl,Ldh,Best2,app,GlyRS,CTPsyn,Sytbeta,Gbs-70E,fz,nuf,Rbp6,ND-24L,nmo,Vps36,CG32485,sty,eIF5B,mas,CG7506,mbf1,CG11263,CG32199,hid,GlcAT-P,Plod,Pdi,sti,Trpml,EMC10,bnl,Dl,ATPsynD,cdi,SNF4Agamma,hth,alpha-Man-IIa,CG8036,Dhod,lqfR,CG4704,Hmt-1,jar,CG5003,RpS10a,tau,CG7218,betaTub97EF,UQCR-14L,ss,cv-c,HEATR2,Pli,CG31145,stg,SP1029,Elp1,Jupiter,CG5342,pros,CG17726,Ssadh,msi,Dic2,Antp,CG2091,CG2104,plx,eIF4H2,CG15543,CDase,PH4alphaEFB,Fer2LCH,Cad99C,Lnk,CG46339,spri,dnc,CG3823,CG9650,Rab40,Men,stai
+GO:0044260	b	cellular macromolecule metabolic process	137	4070	0.019129999999999352	eIF4G1,Dyrk3,mts,bun,SC35,bru1,salr,salm,ab,kuz,Fkbp59,numb,Atg18b,Hr39,CG7236,CG9171,drl,Nak,ham,CG10348,CG12620,CG10462,odd,sob,Dyrk2,chinmo,IA-2,Traf4,CG9962,CG3119,betaggt-II,her,ova,Btk29A,aop,tkv,H15,mid,tim,Pkg21D,Pkn,Pgant9,CG9010,Dgp-1,eIF3c,Prosalpha4T2,retn,Mef2,Pka-R2,wde,CG33144,psq,CG8545,phyl,Oaz,exp,jeb,koi,Pgant3,Psc,rgr,muskelin,bab2,Hipk,msn,ProRS-m,Tet,CG2113,croc,vvl,dikar,eIF4E4,sfl,app,GlyRS,Trl,Gbs-70E,CG32176,bma,Vps36,sty,eIF5B,dar1,scrt,CG12605,mbf1,not,CG32199,hid,GlcAT-P,Plod,CG7368,hzg,sti,TfAP-2,bnl,cdi,Not10,SNF4Agamma,hth,alpha-Man-IIa,Kdm2,CG8036,CG5003,RpS10a,CG5639,ss,Ubx,CG10909,timeout,NK7.1,Pli,CG31145,CG4374,pnt,stg,CG11873,Cul5,CG42327,CG14710,CG5342,pros,CG17726,jigr1,msi,Orc2,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,CG2091,CG2104,tll,eIF4H2,PH4alphaEFB,E(spl)m5-HLH,dysf,CG17803,CG17801,Myc,moon,CG32772,disco,CG9650,CG8915,fru,CG7691
+GO:0051641	b	cellular localization	48	1114	0.019379999999999363	unc-13,Cadps,Bsg,spir,numb,Gdi,Atg18b,tweek,chinmo,Snx1,VGlut,Slh,tim,DCTN5-p25,Nnf1b,brp,ktub,CG8841,koi,klar,Oseg2,msn,Snup,CG4074,Syx7,app,Sytbeta,nuf,nudE,Vps36,kug,hth,lqfR,wake,jar,CG7218,asp,cv-c,pros,Nlg1,Nlg3,e(y)2b,plx,CDase,Fer2LCH,Lnk,Rab40,stai
+GO:0051656	b	establishment of organelle localization	12	164	0.019629999999999374	unc-13,spir,d,Nnf1b,koi,klar,msn,nudE,wake,jar,asp,cv-c
+GO:0006718	b	juvenile hormone biosynthetic process	2	7	0.020129999999999284	jhamt,AstA
+GO:0016106	b	sesquiterpenoid biosynthetic process	2	5	0.020129999999999284	jhamt,AstA
+GO:0001558	b	regulation of cell growth	10	88	0.02019999999999913	bun,kuz,CadN,Sema2a,stan,cmpy,fz,dar1,Lnk,Myc
+GO:0051649	b	establishment of localization in cell	38	858	0.020569999999999308	unc-13,Cadps,spir,Gdi,tweek,chinmo,Snx1,VGlut,Slh,tim,DCTN5-p25,Nnf1b,brp,CG8841,koi,klar,Oseg2,msn,Snup,CG4074,Syx7,app,Sytbeta,nuf,nudE,Vps36,lqfR,wake,jar,asp,cv-c,Nlg1,Nlg3,e(y)2b,plx,CDase,Fer2LCH,stai
+GO:0045676	b	regulation of R7 cell differentiation	4	26	0.02072999999999931	aop,cdi,ss,pros
+GO:0031982	c	vesicle	28	504	0.020819999999999412	unc-13,Cadps,spir,Gdi,uif,IA-2,Snx1,VGlut,Slh,tkv,jeb,cmpy,CG4074,Syx7,Sytbeta,fz,nuf,Vps36,CG32485,Trpml,Dl,lqfR,jar,Cad99C,spri,CG3823,Rab40
+GO:0045921	b	positive regulation of exocytosis	2	5	0.02099999999999951	Cadps,jar
+GO:0071684	b	organism emergence from protective structure	4	22	0.021079999999999054	tim,CDase,Pdf,disco
+GO:0009218	b	pyrimidine ribonucleotide metabolic process	2	11	0.021109999999999848	CTPsyn,Dhod
+GO:0009220	b	pyrimidine ribonucleotide biosynthetic process	2	11	0.021109999999999848	CTPsyn,Dhod
+GO:0006468	b	protein phosphorylation	26	479	0.02123999999999907	Dyrk3,mts,CG7236,drl,Nak,Dyrk2,chinmo,Traf4,CG9962,Btk29A,tkv,Pkg21D,Pkn,Pka-R2,jeb,Hipk,msn,Trl,bma,sty,sti,bnl,cdi,SNF4Agamma,CG31145
+GO:0004152	m	dihydroorotate dehydrogenase activity	1	3	0.021269999999998998	Dhod
+GO:0005622	c	intracellular	201	7128	0.021289999999999407	eIF4G1,unc-13,Dyrk3,Cadps,mts,Bsg,bun,SC35,bru1,salr,salm,ab,spir,Eato,Fkbp59,numb,Gdi,Cyp4d21,RapGAP1,uif,CG43321,CG11050,Atg18b,Hr39,CG12511,CG7236,CG9171,CG31913,pigeon,Nak,ssp3,ham,CG10348,CG10462,CG10839,odd,sob,Dyrk2,RFeSP,chinmo,MFS3,IA-2,Traf4,CG9962,HINT1,betaggt-II,Sbat,Snx1,CG5708,ova,Btk29A,aop,CG10874,VGlut,Slh,tkv,H15,mid,tim,mol,osp,Pkg21D,Nnf1b,brp,Pkn,alc,Pgant9,Cbp53E,CG9010,Sema2a,knon,eIF3c,Prosalpha4T2,retn,ReepA,Mef2,Pka-R2,wde,CG33144,psq,Magi,ktub,dgt5,CG8545,CG8841,phyl,Oaz,exp,jeb,koi,Pgant3,CG43340,Psc,rgr,Galphaq,muskelin,bab2,Hipk,klar,Oseg2,Spn,msn,ProRS-m,Snup,Tet,CG2113,CG4858,cmpy,CG4074,CG11396,Spc105R,siz,croc,Syx7,vvl,ple,dikar,eIF4E4,jv,sfl,Ldh,Best2,Tsen54,app,GlyRS,CTPsyn,Sytbeta,Trl,Gbs-70E,fz,nuf,Rbp6,ND-24L,nudE,Vps36,CG32485,sty,eIF5B,dar1,scrt,CG12605,mas,CG7506,spd-2,mbf1,CG11263,not,CG32199,hid,Oatp74D,GlcAT-P,Plod,CG7368,Pdi,sti,Trpml,EMC10,TfAP-2,bnl,Dl,ATPsynD,cdi,gukh,SNF4Agamma,hth,alpha-Man-IIa,Kdm2,CG8036,Dhod,lqfR,wake,CG4704,Hmt-1,jar,CG5003,RpS10a,tau,CG7218,cpo,betaTub97EF,UQCR-14L,Ubx,CG10909,timeout,asp,cv-c,NK7.1,HEATR2,Pli,CG31145,Ugt303B2,CG4374,pnt,stg,SP1029,CG11873,Elp1,CG14710,Jupiter,CG5342,pros,CG17726,Ssadh,jigr1,msi,Orc2,Dic2,e(y)2b,Alh,Antp,glob2,TfIIFalpha,CG1024,CG2091,CG2104,plx,asl,eIF4H2,CG15543,CDase,PH4alphaEFB,Fer2LCH,Cad99C,Lnk,E(spl)m5-HLH,dysf,CG46339,CG17803,CG17801,spri,dnc,Myc,moon,CG3198,CG3823,disco,CG9650,Rab40,Men,stai,fru,CG7691
+GO:0007098	b	centrosome cycle	6	91	0.021919999999999155	mts,nudE,spd-2,asp,stg,asl
+GO:0051213	m	dioxygenase activity	5	56	0.022089999999998913	Tet,CG32199,Plod,Kdm2,PH4alphaEFB
+GO:0023061	b	signal release	12	150	0.02229999999999898	unc-13,Cadps,Gdi,Snx1,brp,cmpy,Syx7,Sytbeta,lqfR,tll,CDase,CG9650
+GO:0051058	b	negative regulation of small GTPase mediated signal transduction	3	8	0.022679999999998823	RapGAP1,sty,cv-c
+GO:0070150	b	mitochondrial glycyl-tRNA aminoacylation	1	1	0.022909999999999466	GlyRS
+GO:0070732	c	spindle envelope	2	9	0.022909999999999466	nudE,Pdi
+GO:0010975	b	regulation of neuron projection development	12	107	0.023119999999998933	ham,CadN,Sema2a,stan,vvl,fz,nudE,dar1,mas,ss,cv-c,pros
+GO:1903722	b	regulation of centriole elongation	1	3	0.02328999999999935	asl
+GO:1903723	b	negative regulation of centriole elongation	1	4	0.02328999999999935	asl
+GO:0019918	b	peptidyl-arginine methylation, to symmetrical-dimethyl arginine	1	3	0.023459999999999735	CG17726
+GO:0035243	m	protein-arginine omega-N symmetric methyltransferase activity	1	3	0.023459999999999735	CG17726
+GO:0009648	b	photoperiodism	3	13	0.023519999999998903	tim,hid,Pdf
+GO:0051295	b	establishment of meiotic spindle localization	2	6	0.02385999999999911	spir,asp
+GO:0048814	b	regulation of dendrite morphogenesis	6	41	0.02433999999999892	CadN,vvl,nudE,dar1,ss,cv-c
+GO:0051383	b	kinetochore organization	2	9	0.024659999999999658	Spc105R,asp
+GO:0019856	b	pyrimidine nucleobase biosynthetic process	2	9	0.024679999999999747	CTPsyn,Dhod
+GO:0008649	m	rRNA methyltransferase activity	2	15	0.025529999999999563	CG8545,CG10909
+GO:0140102	m	catalytic activity, acting on a rRNA	2	15	0.025529999999999563	CG8545,CG10909
+GO:0007562	b	eclosion	3	18	0.0256199999999997	tim,Pdf,disco
+GO:0051642	b	centrosome localization	3	24	0.025649999999998892	numb,nudE,asp
+GO:0061842	b	microtubule organizing center localization	3	18	0.025649999999998892	numb,nudE,asp
+GO:0005829	c	cytosol	37	1443	0.026159999999999767	eIF4G1,bun,Gdi,Atg18b,Dyrk2,MFS3,aop,Slh,tkv,tim,Pkn,Pgant9,Cbp53E,CG9010,Sema2a,eIF3c,phyl,CG43340,msn,CG4858,CTPsyn,sty,eIF5B,mbf1,cdi,hth,ps,CG8036,CG5003,RpS10a,ss,Pli,Elp1,Jupiter,eIF4H2,dnc,CG9650,Men,stai
+GO:1901407	b	regulation of phosphorylation of RNA polymerase II C-terminal domain	1	2	0.02624999999999851	Trl
+GO:0045595	b	regulation of cell differentiation	26	287	0.02635999999999951	mts,bun,bru1,salm,numb,CadN,aop,tkv,mid,Sema2a,stan,bab2,fz,nudE,sty,dar1,Dl,cdi,hth,ss,pnt,pros,Antp,E(spl)m5-HLH,Myc,sdk
+GO:0000041	b	transition metal ion transport	5	44	0.02661999999999866	Trpgamma,CG1358,ZnT63C,Hmt-1,Fer2LCH
+GO:0006413	b	translational initiation	5	100	0.02661999999999866	eIF4G1,eIF3c,eIF4E4,eIF5B,eIF4H2
+GO:0032954	b	regulation of cytokinetic process	2	7	0.026689999999998753	Pkn,sti
+GO:0000276	c	mitochondrial proton-transporting ATP synthase complex, coupling factor F(o)	2	17	0.026859999999999204	knon,ATPsynD
+GO:0045263	c	proton-transporting ATP synthase complex, coupling factor F(o)	2	14	0.026859999999999204	knon,ATPsynD
+GO:0032506	b	cytokinetic process	4	45	0.027189999999998424	spir,Pkn,sti,cv-c
+GO:0031298	c	replication fork protection complex	2	4	0.027319999999999373	tim,timeout
+GO:0031023	b	microtubule organizing center organization	6	84	0.02752999999999877	mts,nudE,spd-2,asp,stg,asl
+GO:0060581	b	cell fate commitment involved in pattern specification	8	35	0.027539999999998552	salm,numb,uif,phyl,fz,nuf,Ubx,Cul5
+GO:0046112	b	nucleobase biosynthetic process	3	15	0.027609999999999198	Prat2,CTPsyn,Dhod
+GO:0007049	b	cell cycle	34	851	0.027909999999998738	eIF4G1,mts,bru1,spir,CG7236,Btk29A,tim,Nnf1b,Pkn,dgt5,Psc,Spc105R,sa,Trl,nuf,nudE,spd-2,sti,Dl,SNF4Agamma,wake,jar,CG5003,betaTub97EF,timeout,asp,cv-c,stg,pros,Orc2,CG2104,asl,tll,Myc
+GO:0051640	b	organelle localization	14	230	0.028289999999998573	unc-13,Bsg,spir,d,Nnf1b,koi,klar,msn,Syx7,nudE,wake,jar,asp,cv-c
+GO:0009199	b	ribonucleoside triphosphate metabolic process	3	33	0.028519999999999514	knon,CTPsyn,ATPsynD
+GO:0009201	b	ribonucleoside triphosphate biosynthetic process	3	33	0.028519999999999514	knon,CTPsyn,ATPsynD
+GO:0016339	b	calcium-dependent cell-cell adhesion	5	27	0.028519999999999514	CadN2,stan,kug,Cad99C
+GO:0016114	b	terpenoid biosynthetic process	2	8	0.02861999999999933	jhamt,AstA
+GO:0050789	b	regulation of biological process	182	4235	0.028629999999999475	eIF4G1,unc-13,Cadps,mts,bun,SC35,bru1,salr,salm,ab,spir,kuz,CG44085,Fkbp59,nAChRalpha6,numb,Gdi,RapGAP1,uif,Hr39,CG7236,pigeon,drl,Nak,ham,CG10348,CadN,CG12620,CG10462,Ca-alpha1D,odd,sob,Dyrk2,chinmo,IA-2,Traf4,Ir25a,CG9962,Duox,Snx1,her,ova,Btk29A,aop,VGlut,Slh,tkv,H15,mid,tim,brp,wun2,Pkn,alc,Cbp53E,Sema2a,Dgp-1,eIF3c,CCHa1-R,ITP,retn,Mef2,Pka-R2,wde,CG33144,stan,psq,Magi,ktub,dgt5,phyl,Oaz,exp,jeb,Pgant3,Psc,rgr,Galphaq,muskelin,CG1139,bab2,Hipk,klar,Spn,msn,Tet,Shab,CG2113,FMRFaR,cmpy,siz,ko,croc,Syx7,vvl,ple,dikar,GluRIA,eIF4E4,sfl,Sytbeta,Trl,Gbs-70E,fz,nuf,CG32176,NijA,nudE,Vps36,sty,eIF5B,dar1,scrt,CG12605,mas,DopEcR,sphinx2,PGRP-SD,mbf1,kug,not,AstC-R1,hid,Ccn,Oatp74D,CG7368,hzg,sti,Trpml,TfAP-2,CG32447,bnl,Dl,ATPsynD,cdi,Octalpha2R,Not10,SNF4Agamma,hth,Kdm2,CG8036,wake,jar,CG5003,tau,CG5639,CG7218,cpo,trv,ss,Ubx,timeout,AstA,cv-c,NK7.1,Pli,CG4374,pnt,stg,CG11873,Cul5,Elp1,CG14710,Jupiter,pros,jigr1,msi,CG9925,Nlg1,Nlg3,MstProx,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,CG2091,asl,5-HT7,tll,eIF4H2,TkR99D,Cad99C,Lnk,E(spl)m4-BFM,E(spl)m5-HLH,dysf,Pdf,plum,CG17803,CG17801,spri,dnc,Myc,CG3198,sdk,CG32772,disco,CG9650,CG8915,Rab40,Men,stai,fru,CG7691
+GO:0060284	b	regulation of cell development	17	173	0.028769999999998717	mts,bun,numb,CadN,aop,Sema2a,stan,fz,nudE,sty,dar1,Dl,pnt,pros,Antp,E(spl)m5-HLH,Myc
+GO:0051240	b	positive regulation of multicellular organismal process	18	213	0.028879999999998327	bun,d,tkv,stan,Hipk,Shab,fz,nudE,nmo,dar1,hzg,Trpml,wake,Ubx,pros,TkR99D,Pdf,Myc
+GO:0019905	m	syntaxin binding	4	31	0.029599999999998697	unc-13,Slh,Sytbeta,CG5886
+GO:0048478	b	replication fork protection	2	6	0.029639999999999615	tim,timeout
+GO:0022402	b	cell cycle process	26	671	0.029779999999998825	mts,bru1,spir,Btk29A,tim,Nnf1b,Pkn,dgt5,Spc105R,sa,nuf,nudE,spd-2,sti,wake,jar,CG5003,timeout,asp,cv-c,stg,pros,Orc2,CG2104,asl,Myc
+GO:0110030	b	regulation of G2/MI transition of meiotic cell cycle	1	2	0.02982999999999956	stg
+GO:0110032	b	positive regulation of G2/MI transition of meiotic cell cycle	1	2	0.02982999999999956	stg
+GO:1901995	b	positive regulation of meiotic cell cycle phase transition	1	2	0.02982999999999956	stg
+GO:0006714	b	sesquiterpenoid metabolic process	2	11	0.030639999999998443	jhamt,AstA
+GO:0006716	b	juvenile hormone metabolic process	2	11	0.030639999999998443	jhamt,AstA
+GO:0061511	b	centriole elongation	1	4	0.030649999999998557	asl
+GO:0047631	m	ADP-ribose diphosphatase activity	1	3	0.03066999999999972	spd-2
+GO:0051425	m	PTB domain binding	1	1	0.030919999999998466	Nak
+GO:0030905	c	retromer, tubulation complex	1	2	0.03093999999999839	Snx1
+GO:0046620	b	regulation of organ growth	8	65	0.03166999999999852	d,tkv,Hipk,Syx7,sfl,hid,Ubx,Myc
+GO:0043111	b	replication fork arrest	2	4	0.03182999999999932	tim,timeout
+GO:0008169	m	C-methyltransferase activity	1	3	0.031899999999999554	CG8545
+GO:0050806	b	positive regulation of synaptic transmission	4	27	0.03190999999999966	VGlut,Cbp53E,FMRFaR,cv-c
+GO:0043696	b	dedifferentiation	3	10	0.03201999999999926	pnt,pros,CG46339
+GO:0043697	b	cell dedifferentiation	3	16	0.03201999999999926	pnt,pros,CG46339
+GO:0045182	m	translation regulator activity	7	103	0.03207999999999972	eIF4G1,Dgp-1,eIF3c,eIF4E4,eIF5B,msi,eIF4H2
+GO:0009142	b	nucleoside triphosphate biosynthetic process	3	36	0.03221999999999888	knon,CTPsyn,ATPsynD
+GO:0051234	b	establishment of localization	89	2104	0.03255999999999987	unc-13,Cadps,spir,Eato,CG9254,Fkbp59,nAChRalpha6,numb,Gdi,CG43321,Nak,tweek,CG9270,Ca-alpha1D,RFeSP,chinmo,MFS3,IA-2,Ir25a,CG9962,Snx1,Trpgamma,CG5888,Btk29A,aop,VGlut,Slh,nompC,tim,DCTN5-p25,mol,Nnf1b,brp,wun2,knon,CG8389,Eglp2,ktub,CG34396,CG8841,koi,Pgant3,CG1358,CG1139,klar,Oseg2,msn,Snup,Shab,cmpy,CG4074,CG11396,Syx7,GluRIA,Best2,app,Sytbeta,nuf,ND-24L,nudE,Vps36,CG32485,ZnT63C,CG43206,CG11262,Oatp74D,CG32079,CG43693,Trpml,ATPsynD,CG7720,lqfR,wake,CG4704,Hmt-1,jar,asp,cv-c,CG31262,Dic2,Nlg1,Nlg3,e(y)2b,plx,tll,CDase,Fer2LCH,Cad99C,spri,CG3690,CG3823,CG9650,Ca-alpha1T,Rab40,stai
+GO:0005795	c	Golgi stack	5	66	0.03264999999999957	Pgant9,CG8841,Pgant3,sfl,alpha-Man-IIa
+GO:0018208	b	peptidyl-proline modification	4	62	0.03316999999999905	Fkbp59,CG32199,CG2104,PH4alphaEFB
+GO:0008356	b	asymmetric cell division	9	112	0.03325999999999916	mts,numb,Nak,fz,Dl,wake,asp,pros,asl
+GO:1902463	b	protein localization to cell leading edge	1	1	0.033349999999998874	kug
+GO:0032499	b	detection of peptidoglycan	1	1	0.03335999999999911	PGRP-SD
+GO:0035155	b	negative regulation of terminal cell fate specification, open tracheal system	2	3	0.03363999999999902	salm,aop
+GO:0008121	m	ubiquinol-cytochrome-c reductase activity	2	10	0.03376000000000023	RFeSP,CG43206
+GO:0000132	b	establishment of mitotic spindle orientation	4	32	0.033809999999999396	nudE,wake,asp,cv-c
+GO:0034498	b	early endosome to Golgi transport	1	2	0.03423000000000023	Snx1
+GO:0015086	m	cadmium ion transmembrane transporter activity	1	2	0.034559999999999244	Hmt-1
+GO:0015691	b	cadmium ion transport	1	2	0.034559999999999244	Hmt-1
+GO:0070574	b	cadmium ion transmembrane transport	1	2	0.034559999999999244	Hmt-1
+GO:0034703	c	cation channel complex	9	59	0.03497000000000062	CG43321,Ca-alpha1D,Trpgamma,CG5888,nompC,Shab,Trpml,CG4704,Ca-alpha1T
+GO:0072527	b	pyrimidine-containing compound metabolic process	3	27	0.03509999999999992	Tet,CTPsyn,Dhod
+GO:0000242	c	pericentriolar material	2	19	0.03521999999999989	spd-2,asl
+GO:0050794	b	regulation of cellular process	174	3949	0.03562000000000078	eIF4G1,unc-13,Cadps,mts,bun,SC35,bru1,salr,salm,ab,spir,kuz,CG44085,nAChRalpha6,numb,Gdi,RapGAP1,uif,Hr39,CG7236,pigeon,drl,Nak,ham,CG10348,CadN,CG12620,CG10462,Ca-alpha1D,odd,sob,Dyrk2,chinmo,Traf4,Ir25a,CG9962,Duox,Snx1,her,ova,Btk29A,aop,VGlut,Slh,tkv,H15,mid,tim,brp,wun2,Pkn,alc,Cbp53E,Sema2a,Dgp-1,eIF3c,CCHa1-R,ITP,retn,Mef2,Pka-R2,wde,CG33144,stan,psq,Magi,ktub,dgt5,phyl,Oaz,exp,jeb,Pgant3,Psc,rgr,Galphaq,muskelin,bab2,Hipk,klar,Spn,msn,Tet,Shab,CG2113,FMRFaR,cmpy,siz,ko,croc,Syx7,vvl,ple,dikar,GluRIA,eIF4E4,sfl,Sytbeta,Trl,Gbs-70E,fz,nuf,CG32176,NijA,nudE,Vps36,sty,eIF5B,dar1,scrt,CG12605,mas,DopEcR,sphinx2,PGRP-SD,mbf1,kug,not,AstC-R1,hid,Ccn,Oatp74D,CG7368,sti,Trpml,TfAP-2,CG32447,bnl,Dl,ATPsynD,cdi,Octalpha2R,Not10,SNF4Agamma,hth,Kdm2,CG8036,wake,jar,CG5003,tau,CG5639,CG7218,cpo,trv,ss,Ubx,timeout,AstA,cv-c,NK7.1,Pli,CG4374,pnt,stg,CG11873,Cul5,CG14710,Jupiter,pros,jigr1,msi,Nlg1,Nlg3,MstProx,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,CG2091,asl,5-HT7,tll,eIF4H2,TkR99D,Cad99C,Lnk,E(spl)m4-BFM,E(spl)m5-HLH,dysf,Pdf,plum,CG17803,CG17801,spri,dnc,Myc,sdk,CG32772,disco,CG9650,Rab40,Men,stai,fru,CG7691
+GO:0000159	c	protein phosphatase type 2A complex	2	15	0.035810000000000446	mts,CG2104
+GO:0099003	b	vesicle-mediated transport in synapse	9	113	0.03604000000000001	unc-13,Cadps,tweek,VGlut,Syx7,Sytbeta,lqfR,Nlg1,Nlg3,CDase
+GO:0099504	b	synaptic vesicle cycle	9	113	0.03604000000000001	unc-13,Cadps,tweek,VGlut,Syx7,Sytbeta,lqfR,Nlg1,Nlg3,CDase
+GO:0016266	b	O-glycan processing	2	16	0.03616000000000002	CG3119,Pgant3
+GO:0034645	b	cellular macromolecule biosynthetic process	89	2468	0.03646000000000065	eIF4G1,bun,SC35,bru1,salr,salm,ab,Atg18b,Hr39,CG9171,ham,CG10348,CG10462,odd,sob,chinmo,CG3119,her,ova,Btk29A,aop,H15,mid,tim,Pgant9,Dgp-1,eIF3c,retn,Mef2,wde,psq,Oaz,exp,Pgant3,Psc,rgr,bab2,ProRS-m,Tet,CG2113,ko,croc,vvl,dikar,eIF4E4,sfl,app,GlyRS,Trl,Gbs-70E,eIF5B,dar1,scrt,CG12605,mbf1,not,GlcAT-P,CG7368,TfAP-2,Not10,hth,Kdm2,CG8036,RpS10a,ss,Ubx,timeout,NK7.1,CG4374,pnt,CG11873,CG14710,CG5342,pros,jigr1,msi,Orc2,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,CG2091,tll,eIF4H2,E(spl)m5-HLH,dysf,CG17803,CG17801,Myc,moon,CG32772,disco,CG9650,fru,CG7691
+GO:0031167	b	rRNA methylation	2	23	0.03651000000000001	CG8545,CG10909
+GO:0009059	b	macromolecule biosynthetic process	90	2492	0.036780000000000306	eIF4G1,bun,SC35,bru1,salr,salm,ab,Atg18b,Hr39,CG9171,ham,CG10348,CG10462,odd,sob,chinmo,CG3119,her,ova,Btk29A,aop,H15,mid,tim,Pgant9,Dgp-1,eIF3c,retn,Mef2,wde,psq,Oaz,exp,Pgant3,Psc,rgr,bab2,ProRS-m,Tet,CG2113,ko,croc,vvl,dikar,eIF4E4,sfl,app,GlyRS,Trl,Gbs-70E,eIF5B,dar1,scrt,CG12605,mbf1,not,GlcAT-P,CG7368,TfAP-2,Not10,hth,alpha-Man-IIa,Kdm2,CG8036,RpS10a,ss,Ubx,timeout,NK7.1,CG4374,pnt,CG11873,CG14710,CG5342,pros,jigr1,msi,Orc2,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,CG2091,tll,eIF4H2,E(spl)m5-HLH,dysf,CG17803,CG17801,Myc,moon,CG32772,disco,CG9650,fru,CG7691
+GO:0006220	b	pyrimidine nucleotide metabolic process	2	15	0.03695000000000041	CTPsyn,Dhod
+GO:0006221	b	pyrimidine nucleotide biosynthetic process	2	15	0.03695000000000041	CTPsyn,Dhod
+GO:0070509	b	calcium ion import	4	17	0.03708999999999991	CG43321,Ca-alpha1D,CG4704,Ca-alpha1T
+GO:0005750	c	mitochondrial respiratory chain complex III	2	17	0.03728000000000034	RFeSP,UQCR-14L
+GO:0045275	c	respiratory chain complex III	2	11	0.03728000000000034	RFeSP,UQCR-14L
+GO:1902003	b	regulation of amyloid-beta formation	1	1	0.037360000000000226	pigeon
+GO:1902004	b	positive regulation of amyloid-beta formation	1	1	0.037360000000000226	pigeon
+GO:1902991	b	regulation of amyloid precursor protein catabolic process	1	1	0.037360000000000226	pigeon
+GO:1902993	b	positive regulation of amyloid precursor protein catabolic process	1	1	0.037360000000000226	pigeon
+GO:0030621	m	U4 snRNA binding	1	4	0.037540000000000476	Snup
+GO:0045956	b	positive regulation of calcium ion-dependent exocytosis	1	1	0.037730000000000936	Cadps
+GO:0031418	m	L-ascorbic acid binding	3	27	0.037810000000000496	CG32199,Plod,PH4alphaEFB
+GO:0010453	b	regulation of cell fate commitment	8	33	0.037820000000001075	bun,salm,aop,H15,mid,cdi,hth,Ubx,pnt
+GO:0007429	b	secondary branching, open tracheal system	2	5	0.03794000000000124	bnl,pnt
+GO:0031208	m	POZ domain binding	2	10	0.03799000000000068	psq,Trl
+GO:0006206	b	pyrimidine nucleobase metabolic process	2	12	0.03807000000000058	CTPsyn,Dhod
+GO:0009141	b	nucleoside triphosphate metabolic process	3	39	0.038460000000000744	knon,CTPsyn,ATPsynD
+GO:0000149	m	SNARE binding	5	69	0.038510000000001675	unc-13,Slh,Syx7,Sytbeta,CG5886
+GO:1990138	b	neuron projection extension	9	57	0.038700000000001004	kuz,CadN2,Sema2a,stan,fz,dar1,spri,dnc
+GO:0001096	m	TFIIF-class transcription factor binding	1	3	0.039490000000000865	TfIIFalpha
+GO:0050773	b	regulation of dendrite development	7	55	0.040380000000001616	ham,CadN,vvl,nudE,dar1,ss,cv-c
+GO:0110116	b	regulation of compound eye photoreceptor cell differentiation	4	25	0.04050000000000155	aop,cdi,ss,pros
+GO:0042694	b	muscle cell fate specification	4	7	0.0405700000000023	numb,jeb,Ubx,Antp
+GO:0031254	c	cell trailing edge	1	2	0.0409900000000013	kug
+GO:0005768	c	endosome	15	281	0.04100000000000181	uif,Snx1,tkv,CG4074,Syx7,fz,nuf,Vps36,CG32485,Trpml,Dl,lqfR,Cad99C,CG3823,Rab40
+GO:0010648	b	negative regulation of cell communication	26	401	0.04169000000000254	mts,numb,RapGAP1,uif,d,aop,phyl,jeb,Galphaq,Hipk,msn,cmpy,CG32176,nmo,sty,sti,ATPsynD,cdi,cv-c,Pli,pnt,Cul5,TkR99D,E(spl)m4-BFM,dnc,CG9650
+GO:0090522	b	vesicle tethering involved in exocytosis	1	5	0.04176000000000293	unc-13
+GO:0007428	b	primary branching, open tracheal system	2	12	0.041970000000001756	bnl,pnt
+GO:0065007	b	biological regulation	195	4746	0.04201000000000257	eIF4G1,unc-13,Cadps,mts,bun,SC35,bru1,salr,salm,ab,spir,kuz,CG44085,Fkbp59,nAChRalpha6,numb,Gdi,RapGAP1,uif,CG43321,Hr39,CG7236,pigeon,drl,Nak,ham,CG10348,CadN,CG12620,CG10462,Ca-alpha1D,odd,sob,Dyrk2,chinmo,IA-2,Traf4,Ir25a,CG9962,Duox,Snx1,her,Trpgamma,jhamt,ova,Btk29A,aop,VGlut,Slh,tkv,H15,mid,tim,brp,wun2,Pkn,alc,Cbp53E,Sema2a,Dgp-1,eIF3c,CCHa1-R,ITP,retn,Mef2,Pka-R2,wde,CG33144,stan,psq,Magi,ktub,CG34396,dgt5,phyl,Oaz,exp,jeb,Pgant3,CG43340,Psc,rgr,Galphaq,muskelin,CG1139,bab2,Hipk,klar,Spn,msn,Tet,Shab,CG2113,FMRFaR,cmpy,siz,ko,croc,Syx7,vvl,ple,dikar,GluRIA,eIF4E4,sfl,Sytbeta,Trl,Gbs-70E,fz,nuf,CG32176,NijA,nudE,Vps36,ZnT63C,sty,eIF5B,dar1,scrt,CG12605,mas,DopEcR,sphinx2,PGRP-SD,mbf1,kug,not,AstC-R1,hid,Ccn,Oatp74D,CG7368,hzg,sti,Trpml,TfAP-2,CG32447,bnl,Dl,ATPsynD,cdi,Octalpha2R,Not10,SNF4Agamma,hth,Kdm2,CG8036,lqfR,wake,CG4704,tnc,jar,CG5003,tau,CG5639,CG7218,cpo,trv,ss,Ubx,timeout,AstA,cv-c,NK7.1,Pli,CG4374,pnt,Mst57Da,stg,CG11873,Cul5,Elp1,CG14710,Jupiter,pros,jigr1,msi,CG9925,Nlg1,Nlg3,MstProx,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,Gasp,CG2091,CG2104,plx,asl,5-HT7,tll,eIF4H2,CDase,Fer2LCH,TkR99D,Cad99C,Lnk,E(spl)m4-BFM,E(spl)m5-HLH,dysf,Pdf,plum,CG46339,CG17803,CG17801,spri,dnc,Myc,CG3198,sdk,CG32772,disco,CG9650,Ca-alpha1T,CG8915,Rab40,Men,stai,fru,CG7691
+GO:0023057	b	negative regulation of signaling	26	402	0.0421700000000014	mts,numb,RapGAP1,uif,d,aop,phyl,jeb,Galphaq,Hipk,msn,cmpy,CG32176,nmo,sty,sti,ATPsynD,cdi,cv-c,Pli,pnt,Cul5,TkR99D,E(spl)m4-BFM,dnc,CG9650
+GO:0051128	b	regulation of cellular component organization	43	775	0.04236000000000219	bun,spir,kuz,numb,Nak,ham,CadN,chinmo,Btk29A,tkv,Sema2a,wde,stan,psq,dgt5,Spn,cmpy,Syx7,vvl,Trl,fz,nudE,dar1,mas,kug,sti,Trpml,Kdm2,CG8036,jar,CG7218,ss,cv-c,Cul5,Jupiter,pros,Cad99C,Lnk,plum,spri,Myc,stai
+GO:0042745	b	circadian sleep/wake cycle	6	55	0.04248000000000259	tim,ITP,Shab,TfAP-2,wake,Pdf
+GO:0043170	b	macromolecule metabolic process	156	5173	0.04273000000000327	eIF4G1,Dyrk3,mts,bun,SC35,bru1,salr,salm,ab,Ance-2,kuz,Fkbp59,numb,CG11319,Atg18b,Hr39,CG7236,CG9171,pigeon,drl,Nak,ham,CG10348,CG42750,CG12620,CG10462,odd,sob,Dyrk2,chinmo,IA-2,Traf4,CG9962,CG3119,betaggt-II,Nepl9,her,ova,Btk29A,aop,tkv,H15,mid,tim,Pkg21D,Pkn,Pgant9,CG9010,Dgp-1,eIF3c,Prosalpha4T2,retn,CG42694,CG32834,Mef2,Pka-R2,wde,CG33144,psq,Cht12,CG8545,phyl,Oaz,exp,jeb,koi,Pgant3,Psc,rgr,muskelin,bab2,Hipk,msn,ProRS-m,Tet,CG2113,croc,vvl,dikar,eIF4E4,sfl,CG6462,yip7,Tsen54,app,GlyRS,Trl,ome,Gbs-70E,CG32176,bma,Vps36,sty,eIF5B,dar1,scrt,CG12605,mas,sphinx2,PGRP-SD,mbf1,CG11263,not,CG32199,hid,GlcAT-P,Plod,CG7368,hzg,sti,TfAP-2,bnl,cdi,Not10,SNF4Agamma,hth,alpha-Man-IIa,Kdm2,CG8036,CG43335,CG5003,RpS10a,CG5639,trv,ss,Ubx,CG10909,timeout,NK7.1,Pli,CG31145,CG4374,pnt,stg,SP1029,CG11873,Cul5,Elp1,CG42327,CG14710,CG5342,pros,CG17726,jigr1,msi,Orc2,CG31199,e(y)2b,Alh,Antp,TfIIFalpha,CG1024,CG2091,CG2104,tll,eIF4H2,PH4alphaEFB,E(spl)m5-HLH,dysf,CG46339,CG17803,CG17801,Myc,moon,CG3198,CG32772,disco,CG9650,CG8915,fru,CG7691
+GO:1902532	b	negative regulation of intracellular signal transduction	9	125	0.042920000000002304	mts,RapGAP1,d,Hipk,sty,sti,ATPsynD,cv-c,dnc
+GO:0090175	b	regulation of establishment of planar polarity	5	35	0.04348000000000242	aop,Hipk,nmo,Dl,pnt
+GO:0060968	b	regulation of gene silencing	5	75	0.04358000000000324	Hr39,psq,Trl,CG8036,Ubx
+GO:0032530	b	regulation of microvillus organization	1	1	0.043830000000002256	Cad99C
+GO:0032531	b	regulation of follicle cell microvillus organization	1	1	0.043830000000002256	Cad99C
+GO:0032532	b	regulation of microvillus length	1	1	0.043830000000002256	Cad99C
+GO:0032533	b	regulation of follicle cell microvillus length	1	1	0.043830000000002256	Cad99C
+GO:0016318	b	ommatidial rotation	7	34	0.044060000000002264	CadN2,stan,fz,nmo,sty,pnt
+GO:0098791	c	Golgi apparatus subcompartment	7	107	0.044280000000002595	pigeon,Pgant9,CG8841,Pgant3,sfl,alpha-Man-IIa,lqfR
+GO:0036158	b	outer dynein arm assembly	2	16	0.04430000000000231	CG10839,HEATR2
+GO:0048663	b	neuron fate commitment	13	101	0.04430000000000231	mts,aop,tkv,mid,phyl,fz,Dl,cdi,hth,klg,pnt,pros,msi
+GO:0046532	b	regulation of photoreceptor cell differentiation	6	45	0.044780000000002936	aop,sty,cdi,ss,pros,sdk
+GO:0030659	c	cytoplasmic vesicle membrane	9	140	0.044960000000003206	unc-13,spir,uif,Snx1,VGlut,nuf,Vps36,Trpml,lqfR
+GO:0006810	b	transport	86	2047	0.04498000000000259	unc-13,Cadps,spir,Eato,CG9254,Fkbp59,nAChRalpha6,numb,Gdi,CG43321,Nak,tweek,CG9270,Ca-alpha1D,RFeSP,chinmo,MFS3,IA-2,Ir25a,CG9962,Snx1,Trpgamma,CG5888,Btk29A,aop,VGlut,Slh,nompC,tim,DCTN5-p25,mol,brp,wun2,knon,CG8389,Eglp2,ktub,CG34396,CG8841,koi,Pgant3,CG1358,CG1139,klar,Oseg2,msn,Snup,Shab,cmpy,CG4074,CG11396,Syx7,GluRIA,Best2,app,Sytbeta,nuf,ND-24L,nudE,Vps36,CG32485,ZnT63C,CG43206,CG11262,Oatp74D,CG32079,CG43693,Trpml,ATPsynD,CG7720,lqfR,CG4704,Hmt-1,jar,asp,CG31262,Dic2,Nlg1,Nlg3,e(y)2b,plx,tll,CDase,Fer2LCH,Cad99C,spri,CG3690,CG3823,CG9650,Ca-alpha1T,Rab40,stai
+GO:0030954	b	astral microtubule nucleation	1	2	0.045020000000002884	asp
+GO:0051418	b	microtubule nucleation by microtubule organizing center	1	3	0.045020000000002884	asp
+GO:0005674	c	transcription factor TFIIF complex	1	10	0.04503000000000364	TfIIFalpha
+GO:0001932	b	regulation of protein phosphorylation	10	134	0.045070000000002726	mts,chinmo,Traf4,Pka-R2,jeb,msn,Trl,sty,bnl,SNF4Agamma
+GO:0004511	m	tyrosine 3-monooxygenase activity	1	3	0.04554000000000273	ple
+GO:0016811	m	hydrolase activity, acting on carbon-nitrogen (but not peptide) bonds, in linear amides	5	66	0.045670000000003104	HINT1,PGRP-SD,CG5112,CDase,CG32750
+GO:2001268	b	negative regulation of cysteine-type endopeptidase activity involved in apoptotic signaling pathway	1	1	0.04575000000000341	CG32176
+GO:0034704	c	calcium channel complex	4	17	0.046080000000003445	CG43321,Ca-alpha1D,CG4704,Ca-alpha1T
+GO:0031346	b	positive regulation of cell projection organization	7	72	0.046270000000004474	stan,fz,nudE,dar1,mas,kug,CG7218
+GO:0007097	b	nuclear migration	4	47	0.04630000000000273	koi,klar,msn,asp
+GO:0016604	c	nuclear body	6	99	0.04694000000000415	SC35,bru1,Snup,CG12605,CG10909,Myc
+GO:0007268	b	synaptic transmission	24	344	0.04750000000000459	unc-13,Cadps,nAChRalpha6,Gdi,VGlut,tkv,brp,Cbp53E,jeb,Galphaq,Shab,FMRFaR,Syx7,Sytbeta,DopEcR,CG32447,lqfR,cpo,cv-c,Nlg1,Nlg3,5-HT7,CDase,TkR99D,dnc
+GO:0098916	b	anterograde trans-synaptic signaling	24	330	0.04750000000000459	unc-13,Cadps,nAChRalpha6,Gdi,VGlut,tkv,brp,Cbp53E,jeb,Galphaq,Shab,FMRFaR,Syx7,Sytbeta,DopEcR,CG32447,lqfR,cpo,cv-c,Nlg1,Nlg3,5-HT7,CDase,TkR99D,dnc
+GO:0001736	b	establishment of planar polarity	13	117	0.047590000000004434	CadN2,aop,stan,Hipk,app,fz,nmo,sty,kug,Dl,pnt
+GO:0007164	b	establishment of tissue polarity	13	94	0.047590000000004434	CadN2,aop,stan,Hipk,app,fz,nmo,sty,kug,Dl,pnt
+GO:0036477	c	somatodendritic compartment	23	283	0.0477900000000044	Gr39b,drl,Nak,CadN,Ir25a,Trpgamma,nompC,Or45a,Cbp53E,ktub,Spn,ple,nudE,Vps36,mas,Pdi,klg,tau,Gr98b,5-HT7,Pdf,plum,Or92a
+GO:1902495	c	transmembrane transporter complex	14	147	0.04796000000000347	nAChRalpha6,CG43321,Ca-alpha1D,RFeSP,Trpgamma,CG5888,nompC,Shab,GluRIA,ND-24L,Trpml,CG4704,UQCR-14L,Ca-alpha1T
+GO:0070127	b	tRNA aminoacylation for mitochondrial protein translation	1	4	0.04822000000000295	GlyRS
+GO:0046552	b	photoreceptor cell fate commitment	11	86	0.048420000000005	mts,aop,tkv,phyl,fz,cdi,hth,klg,pnt,pros,msi
+GO:0000379	b	tRNA-type intron splice site recognition and cleavage	1	3	0.04855000000000528	Tsen54
+GO:0048813	b	dendrite morphogenesis	18	210	0.048670000000003516	ab,drl,Nak,ham,CadN,Sema2a,retn,stan,vvl,GlyRS,D,nudE,dar1,hid,ss,cv-c,pros,fru
+GO:0045570	b	regulation of imaginal disc growth	6	44	0.048950000000004816	d,tkv,Syx7,sfl,Ubx,Myc
+GO:0051130	b	positive regulation of cellular component organization	19	324	0.048980000000005144	spir,numb,chinmo,tkv,wde,stan,Syx7,Trl,fz,nudE,dar1,mas,kug,Trpml,CG7218,Jupiter,Cad99C,spri
+GO:0072518	m	Rho-dependent protein serine/threonine kinase activity	1	2	0.049330000000004724	sti
+GO:1901993	b	regulation of meiotic cell cycle phase transition	1	4	0.049920000000005155	stg
