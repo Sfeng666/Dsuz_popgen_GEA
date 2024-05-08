@@ -4,7 +4,7 @@ Code for major analyses performed in population genomic analyses and genome-envi
 
 Related publication:
 
-Genomic Diversity Illuminates the Species History and Environmental Adaptation of Drosophila suzukii    
+Genomic Diversity Illuminates the Environmental Adaptation of Drosophila suzukii    
 Siyuan Feng, Samuel P. DeGrey, Christelle Guédot, Sean D. Schoville, John E. Pool   
 bioRxiv 2023.07.03.547576; doi: https://doi.org/10.1101/2023.07.03.547576
 
