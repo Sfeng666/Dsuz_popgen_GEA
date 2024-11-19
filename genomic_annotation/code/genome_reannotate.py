@@ -4,7 +4,7 @@
 ##  *  Function: annotate every site of a genome by exclusive categories of interest]
 ##  *  Author: Siyuan Feng
 ##  *  Mail: siyuanfeng.bioinfo@gmail.com
-##  *  Version: 07.03.2021
+##  *  Version: 11.19.2024
 ##  *
 ################################################################################
 
@@ -18,7 +18,7 @@ from optparse import OptionParser
 ### help and usage ### 
 usage = "usage: %prog [options] args"
 description = '''Function: to annotate each site of a genome by nine pre-defined categories'''
-version = '%prog 07.03.2021'
+version = '%prog 11.19.2024'
 parser = OptionParser(usage=usage,version=version, description = description)
 parser.add_option("--region",
                     action="store",
@@ -184,25 +184,27 @@ with gzip.open(in_anno, 'rt') as f:
                         gene_biotype = re.search('gene_biotype=(.*)', attr).group(1)
                     annotation[chr].setdefault(gene, dict(gene=[chr, start, end, strand, gene_biotype]))
 
-                elif feature == 'mRNA' or feature == 'transcript' or feature in ["guide_RNA", "lnc_RNA", "rRNA", "snRNA", "snoRNA", "tRNA"]:
+                elif feature == 'mRNA' or feature == 'transcript' or feature in ["guide_RNA", "ncRNA", "miRNA", "lnc_RNA", "rRNA", "snRNA", "snoRNA", "SRP_RNA", "RNase_MRP_RNA", "RNase_P_RNA", "tRNA", "antisense_RNA", "primary_transcript"]:
                     RNA = re.search('ID=(.*?);', attr).group(1)
                     parent = re.search('Parent=(.*?);', attr).group(1)
 
-                    if feature == 'mRNA':
+                    if feature == 'mRNA':   # nest 'mRNA' under 'gene', and create empty lists of 'exon' and 'CDS' under 'mRNA'
                         annotation[chr][parent].setdefault(RNA, dict(exon = {}, CDS = {}))
-                    else:
-                        annotation[chr][parent].setdefault(RNA, dict(exon={}))
+                    else:   # nest other types of transcripts under 'gene', and create empty lists of 'exon' under the transcript
+                        if feature != 'miRNA':  # the hierachy of miRNA can be nested under 'primary_transcript' in some cases, where there 'parent' is a 'primary_transcript' instead of a 'gene'. Since and the 'parent' transcript is not defined in annotation[chr], error would occur.
+                            annotation[chr][parent].setdefault(RNA, dict(exon={}))
 
                 elif feature == 'exon':
                     if gene_biotype == "pseudogene":
                         pass
                     else:
                         parent = re.search('Parent=(.*?);', attr).group(1)
-                        num = len(annotation[chr][gene][parent]['exon'])
-                        annotation[chr][gene][parent]['exon'][num] = [chr, start, end, strand]
-                        if not (gene_biotype == "protein_coding" and 'CDS' in annotation[chr][gene][parent]):
-                            key = '#'.join([chr, start, end, strand])
-                            coordinate[strand][chr][key] = set_prior_block('R', coordinate[strand][chr], key)
+                        if parent in annotation[chr][gene]: # added to avoid error caused by some exons that are nested under 'miRNA', which is further nested under 'primary_transcript', instead of under the level of a 'gene'
+                            num = len(annotation[chr][gene][parent]['exon'])
+                            annotation[chr][gene][parent]['exon'][num] = [chr, start, end, strand]
+                            if not (gene_biotype == "protein_coding" and 'CDS' in annotation[chr][gene][parent]):
+                                key = '#'.join([chr, start, end, strand])
+                                coordinate[strand][chr][key] = set_prior_block('R', coordinate[strand][chr], key)
                     
                 elif feature == 'CDS':
                     parent = re.search('Parent=(.*?);', attr).group(1)
@@ -326,10 +328,11 @@ for chr in annotation:
                                             coordinate_CDS[strand][chr][key][key_site] = anno_seq
 
 ### 3. Mark the genome with defined categories and output the results
-with open(out_coord, 'w') as f_coord, open(out_seq_for, 'w') as f_seq_for, open(out_seq_rev, 'w') as f_seq_rev, open(out_report, 'w') as f_repo:
+with open(out_coord, 'w') as f_coord, open(out_seq_for, 'w') as f_seq_for, open(out_seq_rev, 'w') as f_seq_rev, open(out_report, 'a') as f_repo:
     ## screen through each base within each chromosome to determine classifications on sites including ambiguous ones
     class_count_both = {x: 0 for x in prior if x != 'CDS'}
-    f_repo.write('\t'.join(['Categories', 'Base count', 'Percent']) + '\n')
+    if not os.path.exists(out_report):
+        f_repo.write('\t'.join(['Categories', 'Base count', 'Percent']) + '\n')
 
     for strand in strands:
         class_count = {x: 0 for x in prior if x != 'CDS'}
