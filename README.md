@@ -4,9 +4,7 @@ Code for major analyses performed in population genomic analyses and genome-envi
 
 Related publication:
 
-Genomic Diversity Illuminates the Environmental Adaptation of Drosophila suzukii    
-Siyuan Feng, Samuel P. DeGrey, Christelle Guédot, Sean D. Schoville, John E. Pool   
-bioRxiv 2023.07.03.547576; doi: https://doi.org/10.1101/2023.07.03.547576
+[Feng S, DeGrey SP, Guédot C, Schoville SD, Pool JE. 2024. Genomic Diversity Illuminates the Environmental Adaptation of Drosophila suzukii. Genome Biology and Evolution 16:evae195.](https://doi.org/10.1093/gbe/evae195)
 
 ## Analyses list
 1. [Identify autosomal and X-linked contigs](assign_contig/README.md)
